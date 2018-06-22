@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "plugin:prettier/recommended",
+    "airbnb",
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    browser: true,
+    node: true,
+    es6: true,
+  },
+  globals: {
+    "__DEV__": false,
+  },
+  plugins: ["react","react-native","prettier"],
+  rules: {
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "es5"
+    }],
+    "react/prop-types": ["off"],
+    "react/jsx-filename-extension": ['error', { extensions: ['.js', '.jsx'] }],
+    "react/prefer-stateless-function": ['off', { "ignorePureComponents": true }],
+    "react/jsx-no-bind": ["error", {
+      "ignoreRefs": false,
+      "allowArrowFunctions": true,
+      "allowFunctions": false,
+      "allowBind": true,
+    }],
+    "react/no-multi-comp": ["off"],
+    'no-nested-ternary': ["off"],
+    'no-use-before-define': ["off"],
+    'no-shadow': ["off"],
+    'no-unused-vars': ["warn"],
+    'no-mixed-operators': ["off"],
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "no-console": ["off"],
+    "global-require": 'off',
+    "comma-dangle": ["off"],
+    "arrow-parens": ["error", "as-needed"],
+    "camelcase": ["off"],
+    "max-len": ["off"],
+    "function-paren-newline": ["off"],
+    "class-methods-use-this": ["off"],
+    "object-curly-newline": ["off"],
+  },
+}
